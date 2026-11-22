@@ -1,0 +1,236 @@
+
+/* Basic styling applied to the whole page */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #fafbfe;
+    color: #1e293b;
+}
+
+/* Header and navigation bar styling */
+.head {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Flexbox is used to keep the logo, links and button in one row */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 40px;
+}
+
+/* Logo image and website name are aligned side by side */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Setting the logo size while maintaining its original shape */
+.logo-img {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* Navigation links are arranged in a row with equal spacing */
+.tabs {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+/* Removing the default underline and setting the link appearance */
+.tabs a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #4b5563;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+/* Changing the link color when the mouse is placed over it */
+.tabs a:hover {
+    color: #6436c9;
+}
+
+/* Highlighting the current page so users know which page they are on */
+.tabs a.active {
+    color: #6436c9;
+    border-bottom: 2px solid #6436c9;
+    padding-bottom: 4px;
+    font-weight: 600;
+}
+
+/* Styling the Get Started button */
+.btn-start {
+    padding: 10px 22px;
+    border-radius: 8px;
+    background-color: #6436c9;
+    color: #ffffff;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Slightly changing the button color on hover */
+.btn-start:hover {
+    background-color: #5227b6;
+}
+
+/* Main section uses Flexbox to place the text and image side by side */
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px 40px;
+    gap: 40px;
+}
+
+/* Giving the left section a fixed maximum width for proper spacing */
+.left {
+    max-width: 520px;
+}
+
+/* Styling the main heading and controlling the space between lines */
+.headline h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.15;
+    margin: 0 0 20px 0;
+    letter-spacing: -0.5px;
+}
+
+/* Giving the words Job Ready a different color to highlight them */
+.job {
+    color: #6436c9;
+}
+
+/* Styling the description and keeping enough space below it */
+.description p {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0 0 32px 0;
+    max-width: 440px;
+}
+
+/* Keeping both action buttons in one row with some space between them */
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Styling the main Start Practicing button */
+.btn-practice {
+    padding: 12px 24px;
+    border-radius: 8px;
+    background-color: #6436c9;
+    color: #ffffff;
+    border: 1.5px solid #6436c9;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* Darker color when the mouse is placed over the button */
+.btn-practice:hover {
+    background-color: #5227b6;
+}
+
+/* Styling the View Problems button with a white background */
+.btn-viewprob {
+    padding: 12px 24px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #6436c9;
+    border: 1.5px solid #6436c9;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* Centering the image inside the right section */
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+/* Keeping the image responsive without changing its original proportions */
+.img-right {
+    max-width: 460px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Footer section contains all three feature cards in one row */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px 40px 60px;
+    gap: 25px;
+    background: rgb(242, 224, 255);
+}
+
+/* Each card has its own white background and rounded corners */
+.card {
+    /* flex: 1; */
+    width: 350px;
+    background-color: white;
+    border: 1px solid rgb(233, 226, 226);
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+
+    /* Flexbox keeps the image, heading and paragraph vertically aligned */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Setting the size of the small images inside the cards */
+.card-img {
+    height: 45px;
+    width: auto;
+    margin-bottom: 15px;
+}
+
+/* Styling the heading inside each feature card */
+.card h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* Styling the description text inside each card */
+.card p {
+    margin: 0;
+    font-size: 14px;
+    color: #64748b;
+}
