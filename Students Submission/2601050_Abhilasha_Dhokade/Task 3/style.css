@@ -1,0 +1,375 @@
+
+/* Applying common box sizing and font styling to the whole page */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #fafbfe;
+    color: #1e293b;
+}
+
+/* Header section with white background and a bottom border */
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* Flexbox is used to arrange the logo, navigation links and button in one row */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 18px 40px;
+}
+
+/* Logo image and website name are aligned side by side */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Rotating the airplane icon slightly to give it a flying look */
+.logo-icon {
+    height: 26px;
+    width: auto;
+    transform: rotate(-30deg);
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 800;
+    color: #111827;
+}
+
+/* Navigation links are arranged in a row with equal spacing */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+/* Removing default underline and setting the link font and color */
+.nav-links a {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+/* Changing the link color when the mouse moves over it */
+.nav-links a:hover {
+    color: #6436c9;
+}
+
+/* Highlighting the active navigation link */
+.nav-links a.active {
+    color: #6436c9;
+    font-weight: 600;
+}
+
+/* Creating a purple underline below the active navigation link */
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #6436c9;
+    border-radius: 4px;
+}
+
+/* Styling the Book Now button in the header */
+.btn-book {
+    background-color: #6436c9;
+    color: #ffffff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Darker background color when the mouse is over the button */
+.btn-book:hover {
+    background-color: #5227b6;
+}
+
+/* Hero section uses a background image with a dark gradient to make the text visible */
+.hero {
+    position: relative;
+    background: linear-gradient(to right, rgba(15, 23, 42, 0.45) 0%, rgba(15, 23, 42, 0.25) 50%, rgba(15, 23, 42, 0.05) 100%), url('Assets/07.png') center/cover no-repeat;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    padding: 60px 40px 100px;
+}
+
+/* Keeping the hero content centered and within the maximum width */
+.hero-content {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Styling the main heading displayed over the background image */
+.hero-content h1 {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 18px 0;
+    max-width: 580px;
+}
+
+/* Styling the short description below the main heading */
+.hero-content p {
+    color: #f8fafc;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 32px 0;
+    max-width: 480px;
+}
+
+/* Keeping both hero buttons in one row */
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Main button for exploring travel packages */
+.btn-explore {
+    background-color: #6436c9;
+    color: #ffffff;
+    border: 1.5px solid #6436c9;
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Changing the button background on hover */
+.btn-explore:hover {
+    background-color: #5227b6;
+}
+
+/* Contact button has a transparent background and white border */
+.btn-contact {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1.5px solid #ffffff;
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Adding a light background when the contact button is hovered */
+.btn-contact:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Search container is moved upwards to overlap the hero section */
+.search-container {
+    max-width: 1280px;
+    margin: -45px auto 55px;
+    padding: 0 40px;
+    position: relative;
+    z-index: 10;
+}
+
+/* White search box with Flexbox to arrange all search options in one row */
+.search-box {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 28px;
+    gap: 15px;
+}
+
+/* Each search option contains an icon and its related text */
+.search-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+    cursor: pointer;
+}
+
+/* Keeping all search icons at the same size */
+.search-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* Styling the heading inside each search option */
+.search-text h4 {
+    margin: 0 0 4px 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* Styling the description below each search heading */
+.search-text p {
+    margin: 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* Vertical line is used to separate the different search options */
+.divider {
+    width: 1px;
+    height: 36px;
+    background-color: #e5e7eb;
+    flex-shrink: 0;
+}
+
+/* Search button with icon and text arranged side by side */
+.btn-search {
+    background-color: #6436c9;
+    color: #ffffff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+/* Setting the search icon size */
+.btn-search img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+/* Changing the search button color on hover */
+.btn-search:hover {
+    background-color: #5227b6;
+}
+
+/* Main section for displaying popular travel destinations */
+.destinations-section {
+    max-width: 1280px;
+    margin: 0 auto 60px;
+    padding: 0 40px;
+}
+
+/* Heading is centered with decorative lines on both sides */
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 35px;
+}
+
+/* Styling the small purple decorative lines */
+.decor-line {
+    width: 36px;
+    height: 3px;
+    background-color: #6436c9;
+    border-radius: 4px;
+}
+
+/* Styling the Popular Destinations heading */
+.section-title h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+/* Flexbox is used to arrange all three destination cards in one row */
+.destinations-grid {
+    display: flex;
+    gap: 24px;
+}
+
+/* Each destination card uses a background image and fixed height */
+.destination-card {
+    flex: 1;
+    height: 270px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Dark gradient overlay makes the destination name and price easy to read */
+.card-overlay {
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* Styling the destination name displayed on each card */
+.card-info h3 {
+    margin: 0 0 6px 0;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Location icon and location name are displayed side by side */
+.location-tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Setting the location icon size */
+.location-tag img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+
+/* Price is displayed inside a small rounded white label */
+.price-pill {
+    background-color: #ffffff;
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
